@@ -1,6 +1,10 @@
 import { BaseComponent } from './../../base.js';
+export interface TextData {
+    readonly title: string;
+    readonly body: string;
+}
 
-export class TextSectionInput extends BaseComponent<HTMLElement> {
+export class TextSectionInput extends BaseComponent<HTMLElement> implements TextData {
     constructor() {
         super(
             `<div>

@@ -1,6 +1,11 @@
 import { BaseComponent } from './../../base.js';
 
-export class MediaSectionInput extends BaseComponent<HTMLElement> {
+export interface MediaData {
+    readonly title: string;
+    readonly url: string;
+}
+
+export class MediaSectionInput extends BaseComponent<HTMLElement> implements MediaData {
     constructor() {
         super(
             `<div>
